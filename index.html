@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8' />
+  <title>Web Dev Cheat-sheet</title>
+  <link href="index.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+  <header class="title-nav">
+    <h1 class="main-title"> Web Development Cheat-sheet </h1>
+    <nav>
+      <ul>
+        <li><a href="#form-tags">Form Tags</a></li>
+        <li><a href="#validation">Validation Tags</a></li>
+        <li><a href="#type-attributes">Type Attributes</a></li>
+      </ul>
+  </header>
+  <main>
+    <section class="table-wrapper">
+      <article id="form-tags">
+        <h2 class="form-title"> Basic Form Tags</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Tag</th>
+              <th>Attribute</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td rowspan="2"><mark>&ltform&gt</mark></td>
+              <td><mark>action</mark>
+              </td>
+              <td>Defines the location URL where the the form data should be sent</td>
+            </tr>
+            <tr>
+              <td><mark>method</mark>
+              </td>
+              <td>Defines the HTTP method use to send the forms data (Generally
+                GET or POST(for more secure data))</td>
+            </tr>
+            <tr>
+              <td rowspan="5"><mark>&ltinput&gt</mark></td>
+              <td><mark>id</mark>
+              </td>
+              <td>Provides a named identifier that can be hooked by the
+                &ltlabel&gt tag.</td>
+            </tr>
+            <tr>
+              <td><mark>type</mark>
+              </td>
+              <td class="table-link">Defines how the input box will render and what type of data it can contain-
+                see <a href="#type-attributes">Type Attribute Table</a></td>
+            </tr>
+            <tr>
+              <td><mark>value</mark>
+              </td>
+              <td>Specifies the value of the &ltinput&gt element-for text,
+                password, hidden 'types' it provides the initial (default) value
+                of the input field</td>
+            </tr>
+            <tr>
+              <td><mark>name</mark>
+              </td>
+              <td>Specifies the name of a form element-important for referencing
+                data or particular elements via Javascript</td>
+            </tr>
+            <tr>
+              <td><mark>list</mark>
+              </td>
+              <td>Used with &ltdatalist&gt to create a list of selectable options
+                for readers-has autocomplete feature. List name should match &ltdatalist&gt ID</td>
+            </tr>
+            <tr>
+              <td><mark>&ltlabel&gt</mark>
+              </td>
+              <td><mark>for</mark>
+              </td>
+              <td>Defines a label for the &ltinput&gt element-providing readable
+                text. Label name <strong>must</strong> match corresponding 'id' attribute
+            </tr>
+            <tr>
+              <td><mark>&lttextarea&gt</mark>
+              </td>
+              <td><mark>row/column</mark>
+              </td>
+              <td>Defines a large textfield, dimensions configured via 'row' and
+                'column' attributes</td>
+            </tr>
+            <tr>
+              <td><mark>&ltdatalist&gt</mark>
+              </td>
+              <td colspan="2">Used with &ltinput type="text" list=""&gt and the &ltoption&gt
+                tag, to create a dropdown list with autocomplete function</td>
+            </tr>
+            <tr>
+              <td><mark>&ltselect&gt</mark>
+              </td>
+              <td colspan="2">Used with syntax &ltoption value=""&gt to provide values for a dropdown box</td>
+            </tr>
+            <tr>
+              <td><mark>&ltoption&gt</mark>
+              </td>
+              <td colspan="2">Used with &ltdatalist&gt and &ltselect&gt to create dropdown boxes</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+    </section>
+    <section class="table-wrapper">
+      <article id="validation">
+        <h2 class="type-table">Form Validation Tags</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Tag</th>
+              <th>Attribute</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td rowspan="4"><mark>&ltinput&gt</mark>
+              </td>
+              <td><mark>required</mark>
+              </td>
+              <td>Creates an input field that must be completed otherwise form will not submit</td>
+            </tr>
+            <tr>
+              <td><mark>min/max</mark>
+              </td>
+              <td>Sets a minimum/maximum number of digits for number type field</td>
+            </tr>
+            <tr>
+              <td><mark>minlength/maxlength</mark>
+              </td>
+              <td>Sets a minimum/maximum number of characters for a text field</td>
+            </tr>
+            <tr>
+              <td><mark>pattern</mark></td>
+              <td>Assigns a regular expression <em>(regex)</em> to an input field to strictly control what can be included
+                e.g. [0-9]+ allows only number inputs and [a-zA-Z]{8,} must contain 8 or more upper/lowercase latin characters</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+    </section>
+    <section class="table-wrapper">
+      <article id="type-attributes">
+        <h2 class="type-table">Form Input Types</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Attribute</th>
+              <th>Description</th>
+              <th class="code-images">Example Code</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><mark>text</mark>
+              </td>
+              <td>Defines input box which accepts text input</td>
+              <td><img src="code-images/text1.png" width="400" /></td>
+            </tr>
+            <tr>
+              <td><mark>password</mark>
+              </td>
+              <td>Defines input box which inputs types characters as asteriks (*)</td>
+              <td><img src="code-images/password.png" width="400" height="60" /></td>
+            </tr>
+            <tr>
+              <td><mark>number</mark>
+              </td>
+              <td>Defines input box which accepts numerical input</td>
+              <td><img src="code-images/number.png" width="400" /></td>
+            </tr>
+            <tr>
+              <td><mark>radio</mark>
+              </td>
+              <td>Defines radio buttons to allow selection between two variables</td>
+              <td><img src="code-images/radio1.png" width="400" /></td>
+            </tr>
+            <tr>
+              <td><mark>checkbox</mark>
+              </td>
+              <td>Defines checkboxes to allow selection off multiple variables</td>
+              <td><img src="code-images/checkbox.png" width="400" height="60" /></td>
+            </tr>
+            <tr>
+              <td><mark>range</mark>
+              </td>
+              <td>Defines a ranged slider to choose variables</td>
+              <td><img src="code-images/range.png" width="400" height="60" /></td>
+            </tr>
+            <tr>
+              <td><mark>submit</mark></td>
+              <td>Defines a button by which to send form data</td>
+              <td><img src="code-images/submit.png" width="400" height="60" /></td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+    </section>
+  </main>
+  <footer>
+    <hr />
+    <p class="footer-text">Created by Kayleigh Hillman as part of Codeacademy training</p>
+  </footer>
+</body>
+
+</html>
